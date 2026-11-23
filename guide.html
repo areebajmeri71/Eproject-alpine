@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mountaineering guide by Alpine Ascents - history, types, techniques, sheltering, hazards, records, our location and success stories.">
+    <title>Guide | Alpine Ascents</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 (full): tabs, table, list group and carousel on this page -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Stylesheet for this page (loaded after Bootstrap, so our design stays the same) -->
+    <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+
+    <!-- ========== PRELOADER (logo screen when the page opens) ========== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img class="preloader-logo" src="aa-logo.svg" alt="Alpine Ascents">
+            <p class="preloader-name">ALPINE <span>ASCENTS</span></p>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+    <!-- copper bar at the top that shows how far you have scrolled -->
+    <div class="scroll-bar" id="scrollBar"></div>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <img src="aa-logo.svg" alt="Alpine Ascents logo" class="logo-img" title="Click to view the logo" style="cursor: pointer;" onerror="this.style.display='none'">
+                <span class="logo-text">ALPINE <span>ASCENTS</span></span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="guide.html" class="active">Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  
+    <section class="page-banner guide-banner">
+        <div class="hero-overlay"></div>
+        <div class="page-banner-content">
+            <h1>Mountaineering Guide</h1>
+            <p>Home &nbsp;/&nbsp; Guide</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+           
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="section-title left">What Is Mountaineering?</h2>
+                    <div class="guide-text">
+                        <p>
+                            Mountaineering, also called mountain climbing, is the sport of reaching (or trying
+                            to reach) high points in mountain areas, mostly for the joy of the climb itself.
+                            People sometimes use the word for an easy walk up a small hill, but real
+                            mountaineering happens where the ground and the weather are dangerous enough that
+                            you need experience to stay safe.
+                        </p>
+                        <p>
+                            Unlike most sports, mountaineering has no single set of official rules. Climbers
+                            follow many different techniques and ideas about how a mountain should be climbed.
+                            What they all share is careful planning, the right skills and a lot of respect
+                            for the mountain. For someone without training, it can be a very dangerous hobby.
+                        </p>
+                        <p>
+                            On this page we have collected the basics: its history, the main types, the
+                            techniques climbers use, how they shelter, the hazards, famous records, where to
+                            find us and some success stories.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <!-- Bootstrap list group with badges -->
+                    <ul class="list-group guide-facts">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Highest mountain
+                            <span class="badge rounded-pill">Everest, 8,849 m</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Peaks above 8,000 m
+                            <span class="badge rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            First Everest summit
+                            <span class="badge rounded-pill">1953</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Oldest mountaineering club
+                            <span class="badge rounded-pill">1857</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Pakistan's 8,000 m peaks
+                            <span class="badge rounded-pill">5</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TOPICS: HISTORY / TYPES / TECHNIQUES / SHELTERING / HAZARDS ========== -->
+    <section class="section guide-alt" id="topics">
+        <div class="container">
+            <h2 class="section-title">The Basics, Topic by Topic</h2>
+            <p class="section-intro">Pick a topic below to read about it.</p>
+
+            <!-- Bootstrap tabs (nav-pills): clicking a button shows its panel below -->
+            <ul class="nav nav-pills justify-content-center guide-tabs" id="topicTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="history-tab" data-bs-toggle="pill" data-bs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="true">History</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="types-tab" data-bs-toggle="pill" data-bs-target="#types" type="button" role="tab" aria-controls="types" aria-selected="false">Types / Styles</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="techniques-tab" data-bs-toggle="pill" data-bs-target="#techniques" type="button" role="tab" aria-controls="techniques" aria-selected="false">Techniques</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sheltering-tab" data-bs-toggle="pill" data-bs-target="#sheltering" type="button" role="tab" aria-controls="sheltering" aria-selected="false">Sheltering</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="hazards-tab" data-bs-toggle="pill" data-bs-target="#hazards" type="button" role="tab" aria-controls="hazards" aria-selected="false">Hazards</button>
+                </li>
+            </ul>
+
+            <div class="tab-content guide-panels">
+
+                <!-- HISTORY -->
+                <div class="tab-pane fade show active" id="history" role="tabpanel" aria-labelledby="history-tab" tabindex="0">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-5">
+                            <img class="guide-photo" src="https://images.unsplash.com/photo-1741257067896-18b4b688766f?auto=format&fit=crop&w=900&q=80" alt="Mount Everest at sunset seen from base camp in Tibet">
+                        </div>
+                        <div class="col-lg-7 guide-text">
+                            <h3>History of Mountaineering</h3>
+                            <p>
+                                Modern mountaineering began in 1786, when Jacques Balmat and Michel-Gabriel
+                                Paccard reached the top of Mont Blanc in the Alps. The years from 1854 to 1865
+                                are called the "Golden Age of Alpinism", when most big Alpine peaks were climbed
+                                for the first time, ending with the Matterhorn in 1865.
+                            </p>
+                            <ul class="guide-list">
+                                <li><strong>1857:</strong> The Alpine Club, the world's first mountaineering club, is started in London.</li>
+                                <li><strong>1950:</strong> Annapurna becomes the first 8,000 m peak to be climbed.</li>
+                                <li><strong>1953:</strong> Edmund Hillary and Tenzing Norgay reach the top of Everest.</li>
+                                <li><strong>1954:</strong> An Italian team makes the first ascent of K2 in Pakistan.</li>
+                                <li><strong>1986:</strong> Reinhold Messner becomes the first person to climb all fourteen 8,000 m peaks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TYPES / STYLES -->
+                <div class="tab-pane fade" id="types" role="tabpanel" aria-labelledby="types-tab" tabindex="0">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-5">
+                            <img class="guide-photo" src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=80" alt="Trekkers walking on a mountain trail">
+                        </div>
+                        <div class="col-lg-7 guide-text">
+                            <h3>Types and Styles</h3>
+                            <p>There are many ways to climb a mountain. The main types are:</p>
+                            <ul class="guide-list">
+                                <li><strong>Trekking / hillwalking:</strong> long walks on mountain trails, no special climbing gear.</li>
+                                <li><strong>Rock climbing:</strong> climbing steep rock with hands and feet, protected by a rope.</li>
+                                <li><strong>Ice climbing:</strong> climbing frozen waterfalls and ice using ice axes and crampons.</li>
+                                <li><strong>Alpine climbing:</strong> mixed rock, snow and ice on high peaks, usually in one push.</li>
+                                <li><strong>Ski mountaineering:</strong> climbing up on skis and skiing back down.</li>
+                            </ul>
+                            <p>
+                                Big climbs are done in two styles: <strong>expedition style</strong>, with fixed
+                                ropes and a chain of camps, or the faster and lighter <strong>alpine style</strong>,
+                                where climbers carry everything with them.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNIQUES -->
+                <div class="tab-pane fade" id="techniques" role="tabpanel" aria-labelledby="techniques-tab" tabindex="0">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-5">
+                            <img class="guide-photo" src="https://images.unsplash.com/photo-1601224748193-d24f166b5c77?auto=format&fit=crop&w=900&q=80" alt="Rock climber on an overhanging red rock wall">
+                        </div>
+                        <div class="col-lg-7 guide-text">
+                            <h3>Climbing Techniques</h3>
+                            <p>Every climber learns a set of basic skills before going high:</p>
+                            <ul class="guide-list">
+                                <li><strong>Rope team:</strong> climbers tie into one rope so the others can hold a fall.</li>
+                                <li><strong>Belaying:</strong> one person controls the rope to catch the climber if they slip.</li>
+                                <li><strong>Abseiling (rappelling):</strong> sliding down a fixed rope in a controlled way.</li>
+                                <li><strong>Crampon technique:</strong> walking safely on hard snow and ice.</li>
+                                <li><strong>Self-arrest:</strong> stopping a slide on snow by digging in the ice axe.</li>
+                                <li><strong>Acclimatisation:</strong> "climb high, sleep low", so the body gets used to thin air.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHELTERING -->
+                <div class="tab-pane fade" id="sheltering" role="tabpanel" aria-labelledby="sheltering-tab" tabindex="0">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-5">
+                            <img class="guide-photo" src="https://images.unsplash.com/photo-1667907406901-bcca2d55c4b4?auto=format&fit=crop&w=900&q=80" alt="Tents of a mountain base camp on snow">
+                        </div>
+                        <div class="col-lg-7 guide-text">
+                            <h3>Sheltering in the Mountains</h3>
+                            <p>On long climbs, a good shelter can save your life. Climbers use:</p>
+                            <ul class="guide-list">
+                                <li><strong>Tents:</strong> strong four-season tents that stand up to wind and snow.</li>
+                                <li><strong>Base camp:</strong> the main camp at the foot of the mountain, with food and supplies.</li>
+                                <li><strong>Mountain huts:</strong> stone or wooden huts on popular routes, like in the Alps.</li>
+                                <li><strong>Bivouac:</strong> a simple night out with a bivy bag, often on a small ledge.</li>
+                                <li><strong>Snow caves and igloos:</strong> dug or built from snow in an emergency; they stay warmer than a tent.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HAZARDS -->
+                <div class="tab-pane fade" id="hazards" role="tabpanel" aria-labelledby="hazards-tab" tabindex="0">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-5">
+                            <img class="guide-photo" src="https://images.unsplash.com/photo-1489575399610-e9a20b205184?auto=format&fit=crop&w=900&q=80" alt="Snowy peaks in cloud and changing weather">
+                        </div>
+                        <div class="col-lg-7 guide-text">
+                            <h3>Mountain Hazards</h3>
+                            <p>The mountains can be dangerous. The biggest risks are:</p>
+                            <ul class="guide-list">
+                                <li><strong>Avalanches:</strong> large amounts of snow suddenly sliding down a slope.</li>
+                                <li><strong>Crevasses:</strong> deep cracks in a glacier, often hidden under snow.</li>
+                                <li><strong>Rockfall and icefall:</strong> loose rocks or ice blocks falling from above.</li>
+                                <li><strong>Altitude sickness:</strong> headache, sickness and worse, caused by thin air up high.</li>
+                                <li><strong>Cold:</strong> frostbite and hypothermia in low temperatures and strong wind.</li>
+                                <li><strong>Bad weather:</strong> storms and whiteouts that make it impossible to see the way.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RECORDS ========== -->
+    <section class="section" id="records">
+        <div class="container">
+            <h2 class="section-title">Mountaineering Records</h2>
+            <p class="section-intro">Some of the most famous firsts and records in climbing history.</p>
+
+            <!-- Bootstrap table: striped rows, highlight on hover, scrolls sideways on small screens -->
+            <div class="table-responsive guide-table">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th scope="col">Record</th>
+                            <th scope="col">Who / What</th>
+                            <th scope="col">When</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Highest mountain on Earth</td>
+                            <td>Mount Everest, 8,849 m (Nepal / China)</td>
+                            <td>Measured in 2020</td>
+                        </tr>
+                        <tr>
+                            <td>First ascent of Everest</td>
+                            <td>Edmund Hillary and Tenzing Norgay</td>
+                            <td>29 May 1953</td>
+                        </tr>
+                        <tr>
+                            <td>First ascent of K2</td>
+                            <td>Achille Compagnoni and Lino Lacedelli (Italy)</td>
+                            <td>31 July 1954</td>
+                        </tr>
+                        <tr>
+                            <td>First Everest climb without bottled oxygen</td>
+                            <td>Reinhold Messner and Peter Habeler</td>
+                            <td>8 May 1978</td>
+                        </tr>
+                        <tr>
+                            <td>First woman on top of Everest</td>
+                            <td>Junko Tabei (Japan)</td>
+                            <td>16 May 1975</td>
+                        </tr>
+                        <tr>
+                            <td>First Pakistani woman on top of Everest</td>
+                            <td>Samina Baig</td>
+                            <td>19 May 2013</td>
+                        </tr>
+                        <tr>
+                            <td>First person to climb all fourteen 8,000 m peaks</td>
+                            <td>Reinhold Messner (Italy)</td>
+                            <td>1986</td>
+                        </tr>
+                        <tr>
+                            <td>First winter ascent of K2</td>
+                            <td>A team of ten Nepali climbers</td>
+                            <td>16 January 2021</td>
+                        </tr>
+                        <tr>
+                            <td>Youngest person on top of Everest</td>
+                            <td>Jordan Romero (USA), age 13</td>
+                            <td>2010</td>
+                        </tr>
+                        <tr>
+                            <td>Oldest person on top of Everest</td>
+                            <td>Yuichiro Miura (Japan), age 80</td>
+                            <td>2013</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OUR LOCATION (with Google Maps) ========== -->
+    <section class="section guide-alt" id="clubs">
+        <div class="container">
+            <h2 class="section-title">Our Location</h2>
+            <p class="section-intro">You can find us at our main location in Karachi, shown on the map.</p>
+
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <!-- Bootstrap list group: the button shows our location on the map (script.js) -->
+                    <div class="list-group guide-clubs" id="clubList">
+                        <!-- our main location: Aptech Computer Education, North Nazimabad Center (Board Office branch), Karachi
+                             (exact map position: latitude 24.9268785, longitude 67.0347483) -->
+                        <button type="button" class="list-group-item list-group-item-action active" data-map="24.9268785,67.0347483" data-zoom="16">
+                            <span class="club-name">Alpine Ascents &middot; Main Location</span>
+                            <span class="club-place">Aptech North Nazimabad Center (Board Office), Jameel Jalibi Road, Karachi</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <!-- Bootstrap "ratio" keeps the map at the same shape on every screen -->
+                    <div class="ratio ratio-4x3 guide-map">
+                        <iframe id="clubMap" title="Map of the selected place"
+                                src="https://maps.google.com/maps?q=24.9268785%2C67.0347483&z=16&output=embed"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SUCCESS STORIES (carousel) ========== -->
+    <section class="section" id="stories">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-intro">Famous expeditions where careful planning and teamwork got climbers to the top.</p>
+
+            <!-- Bootstrap carousel: slides change by themselves, or with the arrows and the small bars -->
+            <div id="storiesCarousel" class="carousel slide guide-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#storiesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Story 1"></button>
+                    <button type="button" data-bs-target="#storiesCarousel" data-bs-slide-to="1" aria-label="Story 2"></button>
+                    <button type="button" data-bs-target="#storiesCarousel" data-bs-slide-to="2" aria-label="Story 3"></button>
+                    <button type="button" data-bs-target="#storiesCarousel" data-bs-slide-to="3" aria-label="Story 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Mount Everest">
+                        <div class="carousel-caption">
+                            <h3>Everest, 1953</h3>
+                            <p>A British expedition of more than 400 people, porters included, set up a chain of camps so that Edmund Hillary and Tenzing Norgay could make the first ascent.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://images.unsplash.com/photo-1627896157734-4d7d4388f28b?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="K2 mountain in Pakistan">
+                        <div class="carousel-caption">
+                            <h3>K2, 1954</h3>
+                            <p>An Italian expedition with help from Pakistani high-altitude porters made the first ascent of the "Savage Mountain" in the Karakoram.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://images.unsplash.com/photo-1638271332429-5438dfb5ba54?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Mountaineers on a snowy expedition route">
+                        <div class="carousel-caption">
+                            <h3>Winter K2, 2021</h3>
+                            <p>Ten Nepali climbers joined forces and reached the top together on 16 January 2021, the first time anyone climbed K2 in winter.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://images.unsplash.com/photo-1549536392-497c31e9139a?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Mountaineer climbing a high snowy slope">
+                        <div class="carousel-caption">
+                            <h3>Samina Baig, 2013</h3>
+                            <p>With a small team, Samina Baig became the first Pakistani woman to stand on top of Mount Everest.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#storiesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#storiesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-about">
+                <h3>ALPINE <span>ASCENTS</span></h3>
+                <p>A student website where we share what we learned about mountaineering, famous peaks, climbing skills and mountain safety.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Alpine Ascents. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== DARK / LIGHT MODE SWITCH (with a hint bubble above it) ========== -->
+    <div class="theme-wrap" id="themeWrap">
+        <div class="theme-tip" id="themeTip" role="status">
+            <span class="theme-tip-dot"></span>
+            <span id="themeTipText">Try dark mode &#127769;</span>
+            <button class="theme-tip-close" id="themeTipClose" type="button" aria-label="Hide this tip">&times;</button>
+        </div>
+        <button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <span class="toggle-stars"></span>
+            <span class="toggle-cloud"></span>
+            <span class="toggle-knob"></span>
+        </button>
+    </div>
+
+    <!-- ========== LOGO POPUP (opens when the logo is clicked) ========== -->
+    <div class="logo-popup" id="logoPopup">
+        <span class="logo-close" id="logoClose">&times;</span>
+        <div class="logo-stage">
+            <span class="logo-ring"></span>
+            <span class="logo-ring ring2"></span>
+            <span class="logo-ring ring3"></span>
+            <img id="logoBig" class="logo-big" src="aa-logo.svg" alt="Alpine Ascents logo">
+            <p class="logo-name">ALPINE <span>ASCENTS</span></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript: makes the tabs and the carousel work -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
